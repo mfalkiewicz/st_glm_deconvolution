@@ -12,15 +12,21 @@ from nipype.interfaces.fsl import Merge
 from counter import Counter
 import copy
 import os
-from stdec import stdec
 
-def run_workflow(args):
+def get_dm(designs,index):
+    from nipype.interfaces.base import Bunch
 
-    eb = pe.Workflow(name='eb')
-    work_dir = /home/data/scratch/UP_ST
-    eb.base_dir = work_dir
+    if index < len(designs.single_events):
+        subject_info = Bunch(conditions = designs.single_events[index][0], onsets = designs.single_events[index][1], durations = designs.single_events[index][2])
+        return subject_info
+    else:
+        subject_info = Bunch()
+        return subject_info
 
+def make_designs(log):
+    from stdec import stdec
     # Generate session_infos for all single trials
+    nick = "tempsub"
     conditions = ["PT","WT","PL","WL","AT","PTerr","WTerr","PLerr","WLerr","ATerr","miss"]
     cond_cols = ["Code","Type"]
     cond_pattern = [ [['zucz*'],['hit']],[['zsw*'],['hit']],
@@ -30,20 +36,32 @@ def run_workflow(args):
       [['nsw*'],['hit']],[['zaut*'],['incorrect']],
       [['.*'],['miss']]]
 
-    designs = stdec(args.subject,args.log,cond_cols,conditions,cond_pattern)
+    designs = stdec(nick,log,cond_cols,conditions,cond_pattern)
     designs.read_logfile()
     designs.getconds()
     designs.collapse_dm()
     designs.extract_events()
-    ntrials = len(designs.all_labels)
-    indxs = range(ntrials)
+    return designs
+
+
+def run_workflow(args):
+
+    eb = pe.Workflow(name='eb')
+    work_dir = '/home/data/scratch/UP_ST'
+    eb.base_dir = work_dir
+
+    get_designs = pe.Node(Function(input_names = ['log'], output_names = ['designs'], function=make_designs), name="get_designs")
+    get_designs.inputs.log = args.log
+
+    #ntrials = len(designs.all_labels)
+    indxs = range(120)
 
     # Iterate over the list of timings
-    get_info = pe.Node(Function(input_names = [], output_names = ['info'], function=designs.get_dm), name="get_info")
-    get_info.iterables = ('idx', [0, 1])
+    get_info = pe.Node(Function(input_names = ['designs','index'], output_names = ['info'], function=get_dm), name="get_info")
+    get_info.iterables = ('index', [0, 1])
     #get_info.iterables = ('idx', indxs)
-
-    eb.connect(make_designs,'g',get_info,'g')
+    
+    eb.connect(get_designs,'designs',get_info,'designs')
 
     # Specify model
     s = pe.Node(SpecifyModel(),name='sm')
@@ -69,10 +87,10 @@ def run_workflow(args):
     # Estimate the GLM
     glm = pe.Node(fsl.GLM(),name='glm')
     glm.inputs.out_cope = 'beta.nii.gz'
+    glm.inputs.in_file = args.file
 
     eb.connect(fm,'design_file',glm,'design')
     eb.connect(fm,'con_file',glm,'contrasts')
-    eb.connect(datasource,'func',glm,'in_file')
 
     # Merge estimated betas into a single volume
 

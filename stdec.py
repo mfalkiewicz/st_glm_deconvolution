@@ -19,7 +19,6 @@ class stdec(object):
         import pandas as pd
         import numpy as np
         import re
-        #from nipype.interfaces.base import Bunch
         self.f_conds = np.array(self.data.Code)
         self.f_onsets = np.array(self.data.Time)
         self.stime = self.f_onsets[self.f_conds == 'start']
@@ -81,13 +80,3 @@ class stdec(object):
             consets = np.delete(self.all_onsets,i)
             cdurs = np.delete(self.all_durations,i)
             self.single_events[i] = [[clabels,[slabel]],[consets,[sonset]],[cdurs,[sdur]]]
-
-    def get_dm(self,index):
-        from nipype.interfaces.base import Bunch
-
-        if index < len(self.single_events):
-            subject_info = Bunch(conditions = self.single_events[index][0], onsets = self.single_events[index][1], durations = self.single_events[index][2])
-            return subject_info        
-        else:
-            subject_info = Bunch()
-            return subject_info
