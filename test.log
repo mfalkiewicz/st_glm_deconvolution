@@ -1,0 +1,244 @@
+Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur
+
+Picture	start	other				418324	1	10167	2	0	10000
+Picture	nucz_19	hit	1	48341	2	458990	1	48499	2	0	next
+Picture	ffix_00	other				527822	1	10167	2	0	next
+Picture	zucz_05	hit	1	36928	3	558321	2	37000	3	0	next
+Picture	ffix_00	other				615654	1	10166	2	0	next
+Picture	nucz_26	incorrect	1	58373	2	646153	1	58499	2	0	next
+Picture	ffix_00	other				724985	1	25166	2	0	next
+Picture	nswc_19	miss				770484	1	60166	2	0	next
+Picture	ffix_00	other				850983	1	10166	2	0	next
+Picture	zswg_14	hit	2	30159	2	881482	1	30333	2	0	next
+Picture	ffix_00	other				932148	1	50165	3	0	next
+Picture	nswg_22	miss				1002646	1	60166	2	0	next
+Picture	ffix_00	other				1083145	1	10166	2	0	next
+Picture	nswg_17	hit	1	37911	2	1113644	1	37999	3	0	next
+Picture	ffix_00	other				1171976	2	100165	3	0	next
+Picture	nucz_21	hit	2	43796	2	1292474	1	43833	2	0	next
+Picture	ffix_00	other				1356640	1	10166	2	0	next
+Picture	zswc_23	hit	2	39849	2	1387139	1	39999	2	0	next
+Picture	ffix_00	other				1447471	1	25166	2	0	next
+Picture	zucz_48	hit	2	36495	2	1492970	1	36666	2	0	next
+Picture	ffix_00	other				1549969	1	25166	3	0	next
+Picture	zswc_06	hit	2	38955	2	1595468	1	39000	2	0	next
+Picture	ffix_00	other				1654801	1	25166	2	0	next
+Picture	zaut_22	hit	2	25561	2	1700300	1	25666	2	0	next
+Picture	ffix_00	other				1746299	1	25166	2	0	next
+Picture	zucz_03	hit	2	24940	2	1791798	1	24999	3	0	next
+Picture	ffix_00	other				1837130	2	50166	3	0	next
+Picture	zaut_06	hit	2	23586	2	1907629	1	23666	2	0	next
+Picture	ffix_00	other				1951628	1	200163	2	0	next
+Picture	nucz_39	hit	2	54604	2	2172124	1	54666	2	0	next
+Picture	ffix_00	other				2247123	1	50165	2	0	next
+Picture	nswg_19	incorrect	2	28779	324	2317466	323	28821	325	0	next
+Picture	ffix_00	other				2366620	1	25167	2	0	next
+Picture	zucz_18	hit	2	33004	3	2412119	2	33166	4	0	next
+Picture	ffix_00	other				2465618	2	10167	3	0	next
+Picture	zswg_03	hit	1	26123	2	2496118	1	26166	2	0	next
+Picture	ffix_00	other				2542617	1	75165	2	0	next
+Picture	zswc_02	hit	2	27722	2	2638115	1	27833	2	0	next
+Picture	ffix_00	other				2686281	1	10166	2	0	next
+Picture	zaut_01	hit	2	19455	2	2716780	1	19500	2	0	next
+Picture	ffix_00	other				2756613	1	25166	2	0	next
+Picture	zucz_10	hit	1	19561	2	2802112	1	19666	2	0	next
+Picture	ffix_00	other				2842111	1	150164	2	0	next
+Picture	zaut_18	hit	2	31859	2	3012608	1	31999	3	0	next
+Picture	ffix_00	other				3064940	2	50166	3	0	next
+Picture	zucz_46	hit	2	38300	324	3135284	323	38488	324	0	next
+Picture	ffix_00	other				3194105	1	10166	2	0	next
+Picture	zaut_21	hit	1	27458	2	3224604	1	27499	3	0	next
+Picture	ffix_00	other				3272436	2	75166	3	0	next
+Picture	zswc_03	hit	1	28204	2	3367935	1	28332	3	0	next
+Picture	ffix_00	other				3416600	2	75166	3	0	next
+Picture	nswc_14	incorrect	1	39796	2	3512099	1	39832	2	0	next
+Picture	ffix_00	other				3572264	1	10167	2	0	next
+Picture	nswg_23	hit	1	49368	2	3602764	1	49499	2	0	next
+Picture	ffix_00	other				3672596	1	75165	2	0	next
+Picture	zswc_08	hit	2	28035	2	3768094	1	28166	2	0	next
+Picture	ffix_00	other				3816593	1	10166	3	0	next
+Picture	nswg_07	incorrect	2	24235	2	3847092	1	24333	2	0	next
+Picture	ffix_00	other				3891758	1	75165	3	0	next
+Picture	nswc_18	incorrect	1	38867	2	3987256	1	39000	2	0	next
+Picture	ffix_00	other				4046589	1	25166	2	0	next
+Picture	nswc_13	incorrect	2	25632	2	4092088	1	25666	2	0	next
+Picture	ffix_00	other				4138087	1	350160	2	0	next
+Picture	zswc_24	hit	1	44890	2	4508580	1	44999	2	0	next
+Picture	ffix_00	other				4573912	1	25166	2	0	next
+Picture	zswg_12	hit	2	25096	2	4619411	1	25166	3	0	next
+Picture	ffix_00	other				4664910	1	10167	2	0	next
+Picture	zaut_16	hit	2	22775	2	4695410	1	22833	2	0	next
+Picture	ffix_00	other				4738576	1	250162	2	0	next
+Picture	zucz_45	incorrect	2	44946	2	5009071	1	44999	2	0	next
+Picture	ffix_00	other				5074403	1	10166	2	0	next
+Picture	nswg_20	incorrect	1	25273	2	5104902	1	25333	2	0	next
+Picture	ffix_00	other				5150568	1	10166	2	0	next
+Picture	nswg_08	incorrect	1	27586	2	5181067	1	27666	3	0	next
+Picture	ffix_00	other				5229066	2	10167	3	0	next
+Picture	zswg_13	hit	1	29965	2	5259566	1	29999	2	0	next
+Picture	ffix_00	other				5309898	1	75165	3	0	next
+Picture	zaut_12	hit	1	33331	3	5405396	2	33500	3	0	next
+Picture	ffix_00	other				5459229	1	50165	3	0	next
+Picture	zswg_10	hit	2	35477	3	5529727	2	35666	4	0	next
+Picture	ffix_00	other				5585726	2	75166	3	0	next
+Picture	nswg_21	incorrect	2	42055	2	5681225	1	42166	2	0	next
+Picture	ffix_00	other				5743723	2	25167	3	0	next
+Picture	nswg_24	hit	2	25895	2	5789223	1	25999	2	0	next
+Picture	ffix_00	other				5835555	1	25166	2	0	next
+Picture	nswg_16	hit	2	50381	2	5881054	1	50499	2	0	next
+Picture	ffix_00	other				5951886	1	10167	2	0	next
+Picture	zswg_06	hit	1	21767	2	5982386	1	21833	2	0	next
+Picture	ffix_00	other				6024552	1	10166	2	0	next
+Picture	zucz_13	hit	2	25100	2	6055051	1	25166	2	0	next
+Picture	ffix_00	other				6100550	1	25166	2	0	next
+Picture	zucz_06	hit	1	25940	2	6146049	1	26000	2	0	next
+Picture	ffix_00	other				6192382	1	75165	2	0	next
+Picture	nucz_20	hit	1	29465	2	6287880	1	29499	3	0	next
+Picture	ffix_00	other				6337712	1	50166	2	0	next
+Picture	zucz_07	hit	2	32571	2	6408211	1	32666	2	0	next
+Picture	ffix_00	other				6461049	329	150158	330	0	next
+Picture	zaut_02	hit	1	18837	2	6631540	1	19000	2	0	next
+Picture	ffix_00	other				6670873	1	125164	2	0	next
+Picture	nswc_17 	hit	1	58561	2	6816370	1	58666	2	0	next
+Picture	ffix_00	other				6895369	1	100164	3	0	next
+Picture	nucz_24	hit	2	38581	3	7015866	2	38666	4	0	next
+Picture	ffix_00	other				7074865	1	75166	2	0	next
+Picture	zswg_11	incorrect	2	37760	3	7170363	2	37833	3	0	next
+Picture	ffix_00	other				7228529	1	125164	3	0	next
+Picture	zucz_04	hit	2	20332	3	7374026	2	20500	3	0	next
+Picture	ffix_00	other				7414859	1	25166	2	0	next
+Picture	zaut_14	hit	2	13758	2	7460358	1	13833	2	0	next
+Picture	ffix_00	other				7494362	330	50161	331	0	next
+Picture	zaut_17	hit	1	21337	2	7564856	1	21500	2	0	next
+Picture	ffix_00	other				7606689	1	25166	2	0	next
+Picture	zucz_17	hit	1	25683	2	7652188	1	25833	2	0	next
+Picture	ffix_00	other				7698354	1	10166	2	0	next
+Picture	nswc_20	incorrect	1	41416	2	7728853	1	41499	2	0	next
+Picture	ffix_00	other				7790685	1	25166	3	0	next
+Picture	zucz_14	hit	1	24803	3	7836184	2	24833	3	0	next
+Picture	ffix_00	other				7881350	1	25166	3	0	next
+Picture	zswg_02	hit	2	29335	3	7926849	2	29500	3	0	next
+Picture	ffix_00	other				7976521	329	75159	331	0	next
+Picture	nswg_15	incorrect	2	27608	2	8072013	1	27667	2	0	next
+Picture	ffix_00	other				8119851	329	50161	330	0	next
+Picture	zucz_16	hit	2	27511	326	8190187	325	27657	326	0	next
+Picture	ffix_00	other				8238177	1	50166	2	0	next
+Picture	zswg_09	hit	1	30299	2	8308676	1	30332	2	0	next
+Picture	ffix_00	other				8359341	1	25167	2	0	next
+Picture	nucz_38	hit	2	32452	3	8404840	2	32500	3	0	next
+Picture	ffix_00	other				8457512	329	25160	330	0	next
+Picture	nswc_16	incorrect	1	33885	2	8503005	1	34000	2	0	next
+Picture	ffix_00	other				8557338	1	50165	2	0	next
+Picture	nswc_21	hit	1	40250	2	8627836	1	40333	2	0	next
+Picture	ffix_00	other				8688502	1	150164	2	0	next
+Picture	nucz_30	incorrect	1	49801	2	8858999	1	49832	2	0	next
+Picture	ffix_00	other				8929164	1	10166	3	0	next
+Picture	nucz_23	hit	1	43215	3	8959663	2	43333	3	0	next
+Picture	ffix_00	other				9023168	329	225157	330	0	next
+Picture	zaut_10	hit	1	20533	2	9268658	1	20666	2	0	next
+Picture	ffix_00	other				9309657	1	10166	3	0	next
+Picture	zswg_05	hit	2	24153	2	9340156	1	24333	2	0	next
+Picture	ffix_00	other				9384822	1	100165	2	0	next
+Picture	zucz_01	hit	1	17545	2	9505320	1	17666	2	0	next
+Picture	ffix_00	other				9543319	1	10167	2	0	next
+Picture	zucz_12	hit	2	28324	2	9573819	1	28499	2	0	next
+Picture	ffix_00	other				9622651	1	10166	3	0	next
+Picture	zaut_24	hit	1	24831	3	9653150	2	25000	3	0	next
+Picture	ffix_00	other				9698483	1	75165	2	0	next
+Picture	zswc_09	hit	1	29204	15	9793973	14	29341	15	0	next
+Picture	ffix_00	other				9843647	1	50164	18	0	next
+Picture	zucz_44	incorrect	1	45028	2	9914146	1	45165	2	0	next
+Picture	ffix_00	other				9979644	1	200163	2	0	next
+Picture	nucz_36	incorrect	1	45668	2	10200140	1	45833	2	0	next
+Picture	ffix_00	other				10266306	1	25166	2	0	next
+Picture	zswc_05	hit	1	28721	2	10311805	1	28833	2	0	next
+Picture	ffix_00	other				10360970	2	25167	3	0	next
+Picture	zswc_13	hit	2	22613	2	10406470	1	22666	2	0	next
+Picture	ffix_00	other				10449469	1	10166	2	0	next
+Picture	nswc_11	incorrect	2	31833	2	10479968	1	32000	2	0	next
+Picture	ffix_00	other				10532301	1	50165	3	0	next
+Picture	nucz_40	miss				10602799	1	60166	2	0	next
+Picture	ffix_00	other				10683298	1	100165	2	0	next
+Picture	zaut_07	hit	2	23437	2	10803796	1	23499	2	0	next
+Picture	ffix_00	other				10847467	329	25161	330	0	next
+Picture	zaut_05	hit	1	14910	2	10892961	1	14999	2	0	next
+Picture	ffix_00	other				10928293	1	325161	2	0	next
+Picture	zswc_04	hit	2	27754	2	11273787	1	27833	2	0	next
+Picture	ffix_00	other				11321953	1	25166	2	0	next
+Picture	zaut_23	hit	2	18567	2	11367452	1	18666	2	0	next
+Picture	ffix_00	other				11406451	1	25166	2	0	next
+Picture	nucz_28	hit	2	43666	2	11451950	1	43833	2	0	next
+Picture	ffix_00	other				11516116	1	25166	2	0	next
+Picture	zaut_08	incorrect	1	15840	2	11561615	1	15999	3	0	next
+Picture	ffix_00	other				11597786	329	25161	330	0	next
+Picture	zaut_11	incorrect	2	20332	2	11643280	1	20500	2	0	next
+Picture	ffix_00	other				11684112	2	10167	3	0	next
+Picture	zucz_02	hit	1	23159	2	11714612	1	23333	2	0	next
+Picture	ffix_00	other				11758117	329	150158	330	0	next
+Picture	zucz_11	hit	2	41477	2	11928608	1	41666	2	0	next
+Picture	ffix_00	other				11990607	1	10166	2	0	next
+Picture	zswc_01	hit	1	19457	2	12021106	1	19500	2	0	next
+Picture	ffix_00	other				12060778	329	10161	330	0	next
+Picture	nswg_18	incorrect	1	32489	2	12091272	1	32666	2	0	next
+Picture	ffix_00	other				12144271	1	10166	2	0	next
+Picture	zucz_32	incorrect	1	30349	2	12174770	1	30499	3	0	next
+Picture	ffix_00	other				12225602	2	75166	3	0	next
+Picture	nucz_29	hit	1	41134	2	12321101	1	41166	2	0	next
+Picture	ffix_00	other				12382599	2	10167	3	0	next
+Picture	zucz_40	incorrect	1	40494	2	12413099	1	40666	2	0	next
+Picture	ffix_00	other				12474098	1	150164	2	0	next
+Picture	zaut_19	hit	2	20033	329	12644434	328	20160	329	0	next
+Picture	ffix_00	other				12684766	329	150158	331	0	next
+Picture	nucz_27	incorrect	2	31524	2	12855257	1	31666	3	0	next
+Picture	ffix_00	other				12907256	2	10167	3	0	next
+Picture	nswc_22	hit	2	32542	2	12937756	1	32666	2	0	next
+Picture	ffix_00	other				12990755	1	75165	2	0	next
+Picture	nucz_22	hit	2	38362	2	13086253	1	38499	2	0	next
+Picture	ffix_00	other				13145085	1	50166	2	0	next
+Picture	zucz_33	incorrect	2	40867	2	13215584	1	40999	2	0	next
+Picture	ffix_00	other				13276916	1	25166	2	0	next
+Picture	zucz_47	hit	1	21394	2	13322415	1	21500	2	0	next
+Picture	ffix_00	other				13364248	1	125164	2	0	next
+Picture	zswg_04	hit	2	32699	2	13509745	1	32833	2	0	next
+Picture	ffix_00	other				13562911	1	225162	2	0	next
+Picture	nswc_12	incorrect	2	26591	2	13808406	1	26666	2	0	next
+Picture	ffix_00	other				13855405	1	10167	2	0	next
+Picture	zucz_15	hit	1	44209	2	13885905	1	44332	2	0	next
+Picture	ffix_00	other				13950570	1	100165	2	0	next
+Picture	nswc_15	incorrect	1	26722	2	14071068	1	26833	2	0	next
+Picture	ffix_00	other				14118072	330	10162	331	0	next
+Picture	zucz_43	hit	1	26982	3	14148566	2	27167	3	0	next
+Picture	ffix_00	other				14196066	1	25166	2	0	next
+Picture	nucz_41	incorrect	2	27901	2	14241565	1	27999	2	0	next
+Picture	ffix_00	other				14289897	1	10167	2	0	next
+Picture	zswc_10	hit	2	35946	2	14320397	1	35999	2	0	next
+Picture	ffix_00	other				14376729	1	10166	3	0	next
+Picture	zswc_07	incorrect	2	21834	2	14407228	1	22000	2	0	next
+Picture	ffix_00	other				14449561	1	100165	2	0	next
+Picture	zaut_15	hit	1	14999	2	14570059	1	15166	2	0	next
+Picture	ffix_00	other				14605558	1	10166	3	0	next
+Picture	nucz_32	incorrect	1	27639	3	14636057	2	27667	3	0	next
+Picture	ffix_00	other				14684057	1	10166	2	0	next
+Picture	zucz_09	hit	1	28658	2	14714556	1	28833	2	0	next
+Picture	ffix_00	other				14763560	330	25161	331	0	next
+Picture	nucz_25	hit	1	57437	2	14809054	1	57499	2	0	next
+Picture	ffix_00	other				14886725	329	10161	330	0	next
+Picture	zaut_09	hit	2	16150	2	14917219	1	16333	2	0	next
+Picture	ffix_00	other				14953885	1	10166	3	0	next
+Picture	zaut_03	hit	2	15783	2	14984384	1	15833	2	0	next
+Picture	ffix_00	other				15020550	1	250162	3	0	next
+Picture	nucz_37	incorrect	2	50154	2	15291045	1	50333	2	0	next
+Picture	ffix_00	other				15361550	328	125158	330	0	next
+Picture	zaut_20	hit	1	20713	2	15507041	1	20833	2	0	next
+Picture	ffix_00	other				15548207	1	100165	2	0	next
+Picture	nucz_31	incorrect	2	44564	2	15668705	1	44666	2	0	next
+Picture	ffix_00	other				15733560	312	150141	313	0	next
+Picture	zswg_01	hit	1	29470	2	15904034	1	29494	20	0	next
+Picture	ffix_00	other				15953866	1	100165	2	0	next
+Picture	zaut_02	hit	1	18416	2	16074364	1	18500	2	0	next
+Picture	ffix_00	other				16113197	1	10166	2	0	next
+Picture	nucz_33	incorrect	2	45401	2	16143696	1	45499	2	0	next
+Picture	ffix_00	other				16209528	1	125165	2	0	next
+Picture	zaut_13	hit	1	16228	3	16355025	2	16334	3	0	next
+Picture	ffix_00	other				16391692	1	175163	2	0	next
+Picture	koniec	other				16587188	1	100165	2	0	100000
