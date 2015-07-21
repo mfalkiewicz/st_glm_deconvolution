@@ -15,19 +15,6 @@ import os
 from stdec import stdec
 
 def run_workflow(args):
-    #from nipype.interfaces.utility import Split
-    #from nipype.interfaces.base import Bunch
-    #from nipype.algorithms.modelgen import SpecifyModel
-    #import nipype.interfaces.fsl as fsl
-    #import nipype.pipeline.engine as pe
-    #import nipype.interfaces.io as nio
-    #import nipype.interfaces.utility as util
-    #from nipype.interfaces.utility import Function
-    #from nipype.interfaces.fsl import Merge
-    #from counter import Counter
-    #import copy
-    #import nipype.interfaces.nipy as nipy
-    #from Experiment import *
 
     eb = pe.Workflow(name='eb')
     work_dir = /home/data/scratch/UP_ST
@@ -40,7 +27,7 @@ def run_workflow(args):
       [['nucz*'],['incorrect']],[['nsw*'],['incorrect']],
       [['zaut*'],['hit']], [['zucz*'],['incorrect']],
       [['zsw*'],['incorrect']],[['nucz*'],['hit']],
-      [['nsw*'],['hit']],[['zaut*'],['incorrect']], 
+      [['nsw*'],['hit']],[['zaut*'],['incorrect']],
       [['.*'],['miss']]]
 
     designs = stdec(args.subject,args.log,cond_cols,conditions,cond_pattern)
@@ -63,27 +50,21 @@ def run_workflow(args):
     s.inputs.input_units = 'secs'
     s.inputs.time_repetition = 2.5
     s.inputs.high_pass_filter_cutoff = 100.
-    eb.connect(datasource,'func',s,'functional_runs')
+    s.inputs.functional_runs = args.file
     eb.connect(get_info,'info',s,'subject_info')
-
-    # Make contrast vectors
-    make_cvecs = pe.Node(Function(input_names = ['g'], output_names = ['c'], function=make_cvectors),name="make_contrasts")
-
-    eb.connect(make_designs,'g',make_cvecs,'g')
 
     # Create FSL Level 1 Design
     l1d = pe.Node(fsl.Level1Design(),name='l1d')
     l1d.inputs.interscan_interval = 2.5
     l1d.inputs.bases = {'dgamma': {'derivs' : False}}
     l1d.inputs.model_serial_correlations = False
-
-    eb.connect(make_cvecs,'c',l1d,'contrasts')
+    l1d.inputs.contrasts = [('st','T',['all','st'],[0, 1])]
     eb.connect(s,'session_info',l1d,'session_info')
 
     # Get it into FEAT-compatible format
     fm = pe.Node(fsl.FEATModel(),name='feet')
     eb.connect(l1d,'ev_files',fm,'ev_files')
-    eb.connect(l1d,'fsf_files',fm,'fsf_file')  
+    eb.connect(l1d,'fsf_files',fm,'fsf_file')
 
     # Estimate the GLM
     glm = pe.Node(fsl.GLM(),name='glm')
@@ -92,7 +73,6 @@ def run_workflow(args):
     eb.connect(fm,'design_file',glm,'design')
     eb.connect(fm,'con_file',glm,'contrasts')
     eb.connect(datasource,'func',glm,'in_file')
-
 
     # Merge estimated betas into a single volume
 
@@ -104,7 +84,7 @@ def run_workflow(args):
     # Write outputs
 
     datasink = pe.Node(nio.DataSink(), name='sinker')
-    datasink.inputs.base_directory = '/home/mfalkiewicz/sdt'
+    datasink.inputs.base_directory = '/home/mfalkiewicz/expriments/UP/preprocessed/deconvolution/' + args.subject
     eb.connect(merger,'merged_file',datasink,'beta')
 
     # Run the whole thing
@@ -124,5 +104,5 @@ if __name__ == "__main__":
                         help="Logfile", required=True)
 
     args = parser.parse_args()
-        
+
     run_workflow(args)
