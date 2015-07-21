@@ -11,6 +11,12 @@ class stdec(object):
         self.conditions = conditions # array of conditions
         self.cond_pattern = np.array(cond_pattern) # dict of regular expressions for condition classification
 
+    def __copy__(self):
+        return self
+
+    def __deepcopy__(self, memo):
+        return self
+
     def read_logfile(self):
         import pandas as pd
         self.data = pd.read_table(self.filename,sep = "\t",skiprows=[1])
@@ -54,7 +60,7 @@ class stdec(object):
             if len(self.cidx > 0):
                 self.e_onsets = self.f_onsets[self.cidx].tolist()
                 self.e_durations = self.f_durations[self.cidx].tolist()
-                self.e_labels = np.repeat(self.conditions[i],len(self.e_onsets))
+                self.e_labels = np.repeat(self.conditions[i],len(self.e_onsets)).tolist()
                 self.labels.append(self.e_labels)
                 self.onsets.append(self.e_onsets)
                 self.durations.append(self.e_durations)
@@ -64,19 +70,18 @@ class stdec(object):
     def collapse_dm(self):
         import numpy as np
 
-        self.all_labels = np.concatenate(self.labels)
-        self.all_onsets = np.concatenate(self.onsets)
-        self.all_durations = np.concatenate(self.durations)
+        self.all_labels = np.concatenate(self.labels).tolist()
+        self.all_onsets = np.concatenate(self.onsets).tolist()
+        self.all_durations = np.concatenate(self.durations).tolist()
 
     def extract_events(self):
-        import numpy as np
 
         self.single_events = {}
         for i, v in enumerate(self.all_onsets):
-            slabel = self.all_labels[i]
             sonset = self.all_onsets[i]
             sdur = self.all_durations[i]
-            clabels = np.delete(self.all_labels,i)
-            consets = np.delete(self.all_onsets,i)
-            cdurs = np.delete(self.all_durations,i)
-            self.single_events[i] = [[clabels,[slabel]],[consets,[sonset]],[cdurs,[sdur]]]
+            consets = self.all_onsets
+            consets.pop(i)
+            cdurs = self.all_durations
+            cdurs.pop(i)
+            self.single_events[i] = [['all','st'],[consets,[sonset]],[cdurs,[sdur]]]

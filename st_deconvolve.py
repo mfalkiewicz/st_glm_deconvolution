@@ -16,12 +16,8 @@ import os
 def get_dm(designs,index):
     from nipype.interfaces.base import Bunch
 
-    if index < len(designs.single_events):
-        subject_info = Bunch(conditions = designs.single_events[index][0], onsets = designs.single_events[index][1], durations = designs.single_events[index][2])
-        return subject_info
-    else:
-        subject_info = Bunch()
-        return subject_info
+    subject_info = Bunch(conditions = designs.single_events[index][0], onsets = designs.single_events[index][1], durations = designs.single_events[index][2])
+    return subject_info
 
 def make_designs(log):
     from stdec import stdec
@@ -47,7 +43,7 @@ def make_designs(log):
 def run_workflow(args):
 
     eb = pe.Workflow(name='eb')
-    work_dir = '/home/data/scratch/UP_ST'
+    work_dir = '/home/data/scratch/UP_ST/' + args.subject
     eb.base_dir = work_dir
 
     get_designs = pe.Node(Function(input_names = ['log'], output_names = ['designs'], function=make_designs), name="get_designs")
@@ -58,7 +54,7 @@ def run_workflow(args):
 
     # Iterate over the list of timings
     get_info = pe.Node(Function(input_names = ['designs','index'], output_names = ['info'], function=get_dm), name="get_info")
-    get_info.iterables = ('index', [0, 1])
+    get_info.iterables = ('index', [1])
     #get_info.iterables = ('idx', indxs)
     
     eb.connect(get_designs,'designs',get_info,'designs')
