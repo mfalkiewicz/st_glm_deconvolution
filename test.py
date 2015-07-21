@@ -10,7 +10,7 @@ cond_pattern = [ [['zucz*'],['hit']],[['zsw*'],['hit']],
     [['nsw*'],['hit']],[['zaut*'],['incorrect']], [['.*'],['miss']]]
 
 
-test = stdec(nick,"d:/science/git/st_glm_deconvolution/test.log",cond_cols,conditions,cond_pattern)
+test = stdec(nick,"test.log",cond_cols,conditions,cond_pattern)
 test.read_logfile()
 test.getconds()
 test.collapse_dm()

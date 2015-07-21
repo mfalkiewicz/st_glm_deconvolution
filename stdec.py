@@ -88,6 +88,6 @@ class stdec(object):
         if index < len(self.single_events):
             subject_info = Bunch(conditions = self.single_events[index][0], onsets = self.single_events[index][1], durations = self.single_events[index][2])
             return subject_info        
-        else
+        else:
             subject_info = Bunch()
             return subject_info
