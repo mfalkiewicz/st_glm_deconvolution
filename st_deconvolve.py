@@ -39,6 +39,14 @@ def make_designs(log):
     designs.extract_events()
     return designs
 
+def write_conditions(designs):
+    import numpy as np
+    import os
+
+    np.savetxt("conditions.txt",designs.all_labels,fmt="%s")
+
+    return os.path.abspath("conditions.txt")
+
 
 def run_workflow(args):
 
@@ -58,6 +66,11 @@ def run_workflow(args):
     #get_info.iterables = ('idx', indxs)
 
     eb.connect(get_designs,'designs',get_info,'designs')
+
+    # Save text file with trial list
+    write_cond = pe.Node(Function(input_names = ['designs'], output_names = ['condfile'], function=write_conditions), name="write_conditions")
+    eb.connect(get_designs,'designs',write_cond,'designs')
+
 
     # Specify model
     s = pe.Node(SpecifyModel(),name='sm')
@@ -101,7 +114,8 @@ def run_workflow(args):
     datasink.inputs.base_directory = '/home/mfalkiewicz/expriments/UP/preprocessed/deconvolution/'
     datasink.inputs.container = args.subject
     eb.connect(infosource,'subject_id',datasink,'containter')
-    eb.connect(merger,'merged_file',datasink,'betas')
+    eb.connect(merger,'merged_file',datasink,'single_trials')
+    eb.connect(write_cond,'condfile',datasink,'conditions')
 
     # Run the whole thing
 
