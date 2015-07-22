@@ -54,7 +54,7 @@ def run_workflow(args):
 
     # Iterate over the list of timings
     get_info = pe.Node(Function(input_names = ['designs','index'], output_names = ['info'], function=get_dm), name="get_info")
-    get_info.iterables = ('index', [1])
+    get_info.iterables = ('index', [0, 1, 2])
     #get_info.iterables = ('idx', indxs)
     
     eb.connect(get_designs,'designs',get_info,'designs')
