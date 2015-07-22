@@ -56,7 +56,7 @@ def run_workflow(args):
     get_info = pe.Node(Function(input_names = ['designs','index'], output_names = ['info'], function=get_dm), name="get_info")
     get_info.iterables = ('index', [1])
     #get_info.iterables = ('idx', indxs)
-    
+
     eb.connect(get_designs,'designs',get_info,'designs')
 
     # Specify model
@@ -98,8 +98,10 @@ def run_workflow(args):
     # Write outputs
 
     datasink = pe.Node(nio.DataSink(), name='sinker')
-    datasink.inputs.base_directory = '/home/mfalkiewicz/expriments/UP/preprocessed/deconvolution/' + args.subject
-    eb.connect(merger,'merged_file',datasink,'beta')
+    datasink.inputs.base_directory = '/home/mfalkiewicz/expriments/UP/preprocessed/deconvolution/'
+    datasink.inputs.container = args.subject
+    eb.connect(infosource,'subject_id',datasink,'containter')
+    eb.connect(merger,'merged_file',datasink,'betas')
 
     # Run the whole thing
 
