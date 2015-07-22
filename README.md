@@ -7,7 +7,7 @@ This set of scripts and classes can be used to perform single-trial deconvolutio
 
 st_deconvolve.py is the main python script with following arguments:
 - -f [--file] : fMRI timeseries
-- -d [--logfile] : Presentation logfile
+- -d [--logfile] : Presentation logfile (see test.log for example)
 - -s [--subject] : subject name
 
 
