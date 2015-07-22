@@ -98,9 +98,8 @@ def run_workflow(args):
     # Write outputs
 
     datasink = pe.Node(nio.DataSink(), name='sinker')
-    datasink.inputs.base_directory = '/home/mfalkiewicz/expriments/UP/preprocessed/deconvolution/'
+    datasink.inputs.base_directory = '/home/mfalkiewicz/experiments/UP/preprocessed/deconvolution'
     datasink.inputs.container = args.subject
-    eb.connect(infosource,'subject_id',datasink,'containter')
     eb.connect(merger,'merged_file',datasink,'betas')
 
     # Run the whole thing
